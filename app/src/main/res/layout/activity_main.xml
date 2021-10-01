@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@android:drawable/ic_menu_camera"/>
+
+    <EditText
+        android:id="@+id/etSocioNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ivFoto"
+        android:layout_alignTop="@id/ivFoto"
+        android:layout_marginStart="16dp"
+        android:hint="@string/app_socioNombre"/>
+
+    <EditText
+        android:id="@+id/etSocioApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ivFoto"
+        android:layout_alignBottom="@id/ivFoto"
+        android:layout_marginStart="16dp"
+        android:hint="@string/app_socioApellido" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@id/ivFoto"
+        android:layout_alignBottom="@id/ivFoto"
+        android:layout_marginStart="1dp"
+        android:background="@color/black"/>
+    <TextView
+        android:id="@+id/levelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/divider"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="@string/texto_nivel"
+        android:textColor="@color/black"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/levelName"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@color/yellow"/>
+
+    <Button
+        android:id="@+id/boton_guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/guardar"/>
+
+</RelativeLayout>
